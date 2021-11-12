@@ -61,13 +61,13 @@ fetch(`http://ip-api.com/line`).then(res => res.text())
    })
     hyper.on('connecting', () => {
     console.log()
-        start('2', '🔴 LOADING CONNECT KKK')
+        start('2', '🔴 Connecting...Please wait.')
     })
     hyper.on('open', () => {
     success('2', 'Connected')
     setTimeout( () => {
           console.log()
-      	  console.log(color(`🔴 TERHUBUNG KE WHATSAPP KAK BOT NYA`, 'red'))
+      	  console.log(color(`🔴 Connected.. Bot is running.(private mode)`, 'red'))
       	    	}, 1000)    		    	     	
     }) 
 
@@ -123,7 +123,7 @@ const imageToBase64 = require('image-to-base64')
         time_wel = moment.tz("Asia/Jakarta").format("HH:mm");
         
         
-        teks = `Halo ${anu_user} \n\nNama : \nAge :\nGender : Girl/Boy\nAsal :\n\nHope you feel at home and don t forget to fill in\nAnd Following Rules Group`;
+        teks = `Halo ${anu_user} \n\nName: \nAge :\nGender : Girl/Boy\nPlace :\n\nHope you feel at home and don t forget to fill in\nAnd Following Rules Group`;
         
        buff = await getBuffer(`https://fdz-app.herokuapp.com/api/maker/welcome?name=${anu_user}&picurl=${imge}&namegrp=${encodeURI(mdata.subject)}&imggrp=${ime}&member=@${anu_user}&picbg=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk_nUY-WcxLBvTRJPNBUKhqWA6LdZCmZG75A&usqp=CAU`);
        
